@@ -11,8 +11,8 @@
 | 安装使用 | [发行版下载与安装说明](https://github.com/gjhtb69yvz-hash/Compositor/releases/tag/v1.4.7-baoju.1) |
 | 查找工具、菜单和参数 | [中文功能索引](docs/zh-CN-index.md) |
 | 按中文或英文查词 | [中英文术语对照](docs/zh-CN-terms.md)，浏览器内按 Command-F 搜索 |
-| 获取中文语言文件 | 发行版中的 `Compositor-Baoju-中文语言文件.zip` |
-| 获取对应安装包的源码 | 发行版中的 `Compositor-1.4.7-Baoju-双语源码.zip` |
+| 获取中文语言文件 | 发行版中的 `Compositor-Baoju-zh-Hans.zip` |
+| 获取对应安装包的源码 | 发行版中的 `Compositor-1.4.7-Baoju-source.zip` |
 | 查看汉化贡献范围 | [本地化说明](docs/chinese-localization.md) |
 | 查看原作者接收进展 | [上游草稿 PR #234](https://github.com/robbietilton/Compositor/pull/234) |
 
@@ -30,7 +30,7 @@
 
 ## 源码与更新
 
-仓库源码保留上游 Sparkle 集成，供贡献审查。本地安装包使用命令行打包并停用原版自动更新；**与安装包对应的是发行附件“双语源码.zip”**。仓库自动生成的 Source code 压缩包与本地打包源码存在此差别。
+仓库源码保留上游 Sparkle 集成，供贡献审查。本地安装包使用命令行打包并停用原版自动更新；**与安装包对应的是发行附件“Compositor-1.4.7-Baoju-source.zip”**。仓库自动生成的 Source code 压缩包与本地打包源码存在此差别。
 
 ## 致谢与许可
 
