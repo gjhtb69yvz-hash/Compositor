@@ -148,10 +148,10 @@ enum CommandPaletteMenu {
     private static func locate(_ titles: [String], occurrence: Int, in root: NSMenu) -> (NSMenu, Int)? {
         var menu = root
         for title in titles.dropLast() {
-            guard let submenu = menu.items.first(where: { $0.title == title && $0.submenu != nil })?.submenu else { return nil }
+            guard let submenu = menu.items.first(where: { $0.title == L(title) && $0.submenu != nil })?.submenu else { return nil }
             menu = submenu
         }
-        let matches = menu.items.indices.filter { menu.items[$0].title == titles.last && menu.items[$0].submenu == nil }
+        let matches = menu.items.indices.filter { menu.items[$0].title == titles.last.map { L($0) } && menu.items[$0].submenu == nil }
         return matches.indices.contains(occurrence) ? (menu, matches[occurrence]) : nil
     }
 

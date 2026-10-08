@@ -1,5 +1,7 @@
 # Compositor
 
+中文本地化与中英文切换贡献：**Baoju**。See [Chinese localization / 中文本地化](docs/chinese-localization.md).
+
 Adobe Photoshop costs too much and tools like GIMP don’t feel familiar enough for me to stay in flow. That’s why I built Compositor.
 
 The goal was to create a full-featured image editor that is completely free and open source. I used to use Photoshop for compositing and post-processing, so Compositor is built around that workflow - with the tools needed to create a pixel-perfect final image.

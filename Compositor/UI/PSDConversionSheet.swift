@@ -23,29 +23,29 @@ struct PSDConversionSheet: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(request.title).font(.title2.bold())
-            Text(request.isReading ? "Reading the file to see what needs converting."
-                 : "Compositor will convert these Photoshop features. Nothing is applied until you continue.")
+            Text(L(request.title)).font(.title2.bold())
+            Text(L(request.isReading ? "Reading the file to see what needs converting."
+                 : "Compositor will convert these Photoshop features. Nothing is applied until you continue."))
                 .foregroundStyle(.secondary)
             if request.isReading {
                 HStack(spacing: 10) {
                     ProgressView().controlSize(.small)
-                    Text("Reading the Photoshop file…").foregroundStyle(.secondary)
+                    Text(L("Reading the Photoshop file…")).foregroundStyle(.secondary)
                 }
                 .frame(maxWidth: .infinity, minHeight: 180)
             } else {
                 List(request.conversions) { item in
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(item.layerName).font(.headline)
-                        Text(item.message)
+                        Text(L(item.layerName)).font(.headline)
+                        Text(L(item.message))
                     }.padding(.vertical, 4)
                 }
                 .frame(minHeight: 180)
             }
             HStack {
                 Spacer()
-                Button("Cancel") { finish(false) }.keyboardShortcut(.cancelAction)
-                Button(request.confirmTitle) { finish(true) }.keyboardShortcut(.defaultAction)
+                Button(L("Cancel")) { finish(false) }.keyboardShortcut(.cancelAction)
+                Button(L(request.confirmTitle)) { finish(true) }.keyboardShortcut(.defaultAction)
                     .disabled(request.isReading)
             }
         }

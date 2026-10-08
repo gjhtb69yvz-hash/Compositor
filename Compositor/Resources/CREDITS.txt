@@ -1,0 +1,11 @@
+Compositor 中英文社区版
+
+中文本地化与双语界面贡献：Baoju
+Chinese localization and bilingual interface contribution: Baoju
+
+Original Compositor: Robbie Tilton / Wonder Assembly LLC
+Copyright (c) 2026 Wonder Assembly LLC
+Upstream: https://github.com/robbietilton/Compositor
+License: MIT; original copyright and license retained.
+
+Community localization based on Compositor 1.4.7. Not an official upstream release.
